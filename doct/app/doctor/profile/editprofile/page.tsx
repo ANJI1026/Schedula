@@ -6,9 +6,6 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
 // Dynamically import map to avoid SSR issues
-const MapPicker = dynamic(() => import("@/components/MapPicker"), {
-  ssr: false,
-});
 
 export default function EditProfilePage() {
   const router = useRouter();
@@ -114,16 +111,7 @@ export default function EditProfilePage() {
         </button>
       </motion.div>
 
-      {/* Map Popup */}
-      {showMap && (
-        <MapPicker
-          onSelectLocation={(loc) => {
-            setLocalProfile((prev) => ({ ...prev, location: loc }));
-            setShowMap(false);
-          }}
-          onClose={() => setShowMap(false)}
-        />
-      )}
+      
     </div>
   );
 }
