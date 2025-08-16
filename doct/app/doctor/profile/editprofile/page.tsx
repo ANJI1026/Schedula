@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import useProfileStore from "@/store/profileStore";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
