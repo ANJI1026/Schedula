@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation';
 export default function DoctorDashboard() {
   const [showMenu, setShowMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const [activeTab, setActiveTab] = useState("completed");
+  const [activeTab] = useState("completed");
   const [checkedAppointments, setCheckedAppointments] = useState<string[]>([]);
 
   const videoTimes = ["09:00 AM", "09:15 AM", "09:30 AM", "10:45 AM"];
@@ -51,10 +51,6 @@ export default function DoctorDashboard() {
     });
   };
 
-  const tabButtonStyle = (tab: string) =>
-    `px-4 py-2 text-sm rounded-full font-medium ${
-      activeTab === tab ? "bg-cyan-500 text-white" : "bg-gray-100 text-gray-600"
-    }`;
     const router = useRouter();
 
   return (
