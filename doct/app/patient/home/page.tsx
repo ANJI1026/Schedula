@@ -25,7 +25,7 @@ const doctorsData: Doctor[] = [
   },
   {
     id: 2,
-    name: "Dr. Rajiv Kumar",
+    name: "Dr. Kumar Das",
     img: "/dr.png",
     specialist: "Cardiologist",
     description: "Expert in heart diseases and preventive cardiology.",
@@ -62,8 +62,9 @@ const doctorsData: Doctor[] = [
 ];
 
 const SearchDoctor: React.FC = () => {
+ 
   const [search, setSearch] = useState("");
-
+  
   const filteredDoctors = doctorsData.filter((d) =>
     d.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -137,11 +138,15 @@ const SearchDoctor: React.FC = () => {
     msOverflowStyle: "none", // IE 10+
   }}
 >
-  {filteredDoctors.length > 0 &&
-    filteredDoctors.map((doctor) => (
+{filteredDoctors.length > 0 &&
+  filteredDoctors.map((doctor) => (
+    <Link
+      key={doctor.id}
+      href={`/patient/book?doctorId=${doctor.id}`} // doctorId pass kar raha hun
+      className="block"
+    >
       <div
-        key={doctor.id}
-        className="relative bg-white border border-cyan-100 rounded-2xl p-3 flex gap-3 shadow-md cursor-pointer"
+        className="relative bg-white border border-cyan-100 rounded-2xl p-3 flex gap-3 shadow-md hover:shadow-lg transition cursor-pointer"
       >
         <Image
           src={doctor.img}
@@ -164,7 +169,9 @@ const SearchDoctor: React.FC = () => {
           <span className="text-gray-400 text-xs">{doctor.timing}</span>
         </div>
       </div>
-    ))}
+    </Link>
+  ))}
+
   <style jsx>{`
     div::-webkit-scrollbar {
       display: none;
@@ -199,4 +206,3 @@ const SearchDoctor: React.FC = () => {
 };
 
 export default SearchDoctor;
-
