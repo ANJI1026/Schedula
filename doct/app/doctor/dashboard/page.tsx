@@ -117,7 +117,7 @@ export default function DoctorDashboard() {
         {/* Today's Appointment */}
         <div className="mx-4 mt-6">
           <div className="flex justify-between items-center mb-2 ">
-            <p className="font-semibold text-black">Today's Appointment</p>
+            <p className="font-semibold text-black">Todays Appointment</p>
             <Link href="/doctor/appointment">
               <Image
                 src="/arrow.png"
