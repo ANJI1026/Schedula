@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaUserMd, FaStar, FaHospital } from "react-icons/fa";
+import { FaStar, FaHospital } from "react-icons/fa";
 import { MdGroups } from "react-icons/md";
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
 import { IoIosArrowBack } from "react-icons/io";
@@ -207,6 +207,4 @@ function Section({
   );
 }
 
-function Divider() {
-  return <div className="h-px w-[94%] bg-gray-200 mx-auto my-5" />;
-}
+
