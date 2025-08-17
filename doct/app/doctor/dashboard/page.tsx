@@ -150,7 +150,7 @@ export default function DoctorDashboard() {
             className="flex justify-between items-center mb-2"
           >
             <p className="font-semibold text-black">Online Consultation</p>
-            <img
+            <Image
               src="/arrow.png"
               width={20}
               height={20}
