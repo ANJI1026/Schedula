@@ -119,14 +119,15 @@ export default function Home() {
 
             {showCalendar && (
               <div className="mb-4 border border-cyan-100 rounded-xl">
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date: Date) => {
-                    setSelectedDate(date);
-                    setShowCalendar(false);
-                  }}
-                  inline
-                />
+               <DatePicker
+  selected={selectedDate}
+  onChange={(date: Date | null) => {
+    if (date) {
+      setSelectedDate(date);
+      setShowCalendar(false);
+    }
+  }}
+/>
               </div>
             )}
 
