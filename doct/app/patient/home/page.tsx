@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -63,15 +62,7 @@ const doctorsData: Doctor[] = [
 ];
 
 const SearchDoctor: React.FC = () => {
-  const router = useRouter();
   const [search, setSearch] = useState("");
-  const [favorites, setFavorites] = useState<number[]>([]);
-
-  const toggleFavorite = (id: number) => {
-    setFavorites((prev) =>
-      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
-    );
-  };
 
   const filteredDoctors = doctorsData.filter((d) =>
     d.name.toLowerCase().includes(search.toLowerCase())
@@ -208,3 +199,4 @@ const SearchDoctor: React.FC = () => {
 };
 
 export default SearchDoctor;
+
