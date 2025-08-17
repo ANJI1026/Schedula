@@ -25,6 +25,7 @@ export default function AppointmentHistory() {
         payment: "Not paid",
         status: "Completed",
         img: "/fdr.png",
+        reason: "",
       },
     ],
     Canceled: [
@@ -274,3 +275,4 @@ function EmptyState({ type }: { type: string }) {
     </div>
   );
 }
+
