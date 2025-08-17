@@ -4,12 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 export default function DoctorDashboard() {
   const [showMenu, setShowMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const router = useRouter();
 
   return (
     <main className="min-h-screen w-full bg-gray-100 flex justify-center">
