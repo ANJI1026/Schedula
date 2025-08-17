@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function BookAppointmentPage() {
   const router = useRouter();
-  const [selectedSlot, setSelectedSlot] = useState({
+  const [selectedSlot] = useState({
     date: "10 Oct, 2023",
     time: "11:30 AM",
   });
@@ -152,4 +152,5 @@ export default function BookAppointmentPage() {
     </main>
   );
 }
+
 
