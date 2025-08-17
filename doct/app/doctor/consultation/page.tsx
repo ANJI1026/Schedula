@@ -11,7 +11,6 @@ import { useRouter } from 'next/navigation';
 export default function DoctorDashboard() {
   const [showMenu, setShowMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const [activeTab] = useState("completed");
   const [checkedAppointments, setCheckedAppointments] = useState<string[]>([]);
 
   const videoTimes = ["09:00 AM", "09:15 AM", "09:30 AM", "10:45 AM"];
