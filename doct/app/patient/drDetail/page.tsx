@@ -4,6 +4,7 @@ import { FaStar, FaHospital } from "react-icons/fa";
 import { MdGroups } from "react-icons/md";
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
 import { IoIosArrowBack } from "react-icons/io";
+import { ReactNode } from "react";
 import { useRouter } from "next/navigation";
 
 export interface DoctorInfo {
@@ -177,7 +178,7 @@ function StatBox({
   value,
   label,
 }: {
-  icon: JSX.Element;
+  icon: ReactNode; 
   value: string | number;
   label: string;
 }) {
@@ -206,5 +207,6 @@ function Section({
     </div>
   );
 }
+
 
 
