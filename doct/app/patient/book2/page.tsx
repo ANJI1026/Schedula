@@ -136,17 +136,20 @@ export default function Home() {
             </p>
 
             {showCalendar && (
-              <div className="mb-4">
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date: Date) => {
-                    setSelectedDate(date);
-                    setShowCalendar(false);
-                  }}
-                  inline
-                />
-              </div>
-            )}
+  <div className="mb-4">
+    <DatePicker
+      selected={selectedDate}
+      onChange={(date: Date | null) => {
+        if (date) {
+          setSelectedDate(date);
+          setShowCalendar(false);
+        }
+      }}
+      inline
+    />
+  </div>
+)}
+
 
             <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
               {dates.map((d) => (
@@ -219,3 +222,4 @@ export default function Home() {
     </main>
   );
 }
+
