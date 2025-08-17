@@ -52,7 +52,7 @@ export default function LoginPage() {
                 return;
               }
               toast.success("Login successful!");
-              router.push("/patient/otp");
+              router.push("/doctor/dashboard");
             }}
           >
             {() => (
